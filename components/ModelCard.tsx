@@ -4,16 +4,15 @@ import Link from "next/link";
 import type { Collection, FloorPlanModel } from "@/lib/types";
 import { formatModelType, formatSqft } from "@/lib/floor-plans";
 import { useRegistration } from "./RegistrationContext";
-import { PlanThumbnail } from "./PlanThumbnail";
+import { ModelPlanImage } from "./ModelPlanImage";
 import styles from "./ModelCard.module.css";
 
 interface ModelCardProps {
   model: FloorPlanModel;
   collection: Collection;
-  index: number;
 }
 
-export function ModelCard({ model, collection, index }: ModelCardProps) {
+export function ModelCard({ model, collection }: ModelCardProps) {
   const { openRegistration } = useRegistration();
   const typeLabel = formatModelType(model, collection.id);
   const sqftLabel = formatSqft(model);
@@ -22,10 +21,7 @@ export function ModelCard({ model, collection, index }: ModelCardProps) {
   return (
     <article className={styles.card}>
       <Link href={`/floor-plans/${model.slug}`} className={styles.thumbLink}>
-        <PlanThumbnail
-          modelName={model.model}
-          seed={index + (model.sqft ?? model.sqftMin ?? 0)}
-        />
+        <ModelPlanImage slug={model.slug} modelName={model.model} />
       </Link>
       <div className={styles.body}>
         <h3 className={styles.title}>

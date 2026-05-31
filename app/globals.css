@@ -4,16 +4,15 @@
   --color-sage: #7a9b8a;
   --color-cream: #f7f4ef;
   --color-warm-white: #fdfcfa;
-  --color-stone: #5c5a56;
-  --color-stone-light: #8a8780;
-  --color-gold: #b8956a;
-  --color-gold-hover: #9a7a52;
+  --color-stone: #4a4844;
+  --color-stone-light: #7a7770;
+  --color-gold: #c4a574;
+  --color-gold-hover: #a88858;
   --color-border: #e5e0d8;
-  --font-serif: "Georgia", "Times New Roman", serif;
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --shadow-card: 0 4px 24px rgba(26, 61, 46, 0.08);
-  --radius: 12px;
-  --max-width: 1200px;
+  --shadow-card: 0 8px 32px rgba(26, 61, 46, 0.1);
+  --shadow-soft: 0 2px 12px rgba(26, 61, 46, 0.06);
+  --radius: 14px;
+  --max-width: 1180px;
 }
 
 *,
@@ -28,24 +27,27 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--color-stone);
   background: var(--color-warm-white);
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif), Georgia, serif;
   color: var(--color-forest);
-  line-height: 1.25;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 a {
   color: var(--color-forest-light);
+  transition: color 0.2s;
 }
 
 a:hover {
@@ -58,7 +60,7 @@ img {
 }
 
 .container {
-  width: min(100% - 2rem, var(--max-width));
+  width: min(100% - 2.5rem, var(--max-width));
   margin-inline: auto;
 }
 
@@ -79,15 +81,15 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  font-family: var(--font-sans);
+  padding: 0.875rem 1.75rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 0.9375rem;
   font-weight: 600;
   text-decoration: none;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.15s;
+  transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
 .btn:active {
@@ -97,6 +99,7 @@ img {
 .btn-primary {
   background: var(--color-forest);
   color: var(--color-warm-white);
+  box-shadow: var(--shadow-soft);
 }
 
 .btn-primary:hover {
@@ -107,6 +110,7 @@ img {
 .btn-gold {
   background: var(--color-gold);
   color: var(--color-warm-white);
+  box-shadow: 0 4px 16px rgba(196, 165, 116, 0.35);
 }
 
 .btn-gold:hover {
@@ -115,12 +119,25 @@ img {
 }
 
 .btn-outline {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-warm-white);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.btn-outline:hover {
+  background: var(--color-warm-white);
+  color: var(--color-forest);
+  border-color: var(--color-warm-white);
+}
+
+.btn-outline-dark {
   background: transparent;
   color: var(--color-forest);
   border: 2px solid var(--color-forest);
 }
 
-.btn-outline:hover {
+.btn-outline-dark:hover {
   background: var(--color-forest);
   color: var(--color-warm-white);
 }
@@ -130,25 +147,31 @@ img {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .section-alt {
   background: var(--color-cream);
 }
 
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin: 0 0 0.75rem;
+}
+
 .lead {
   font-size: 1.125rem;
   max-width: 42rem;
+  color: var(--color-stone);
 }
 
 .badge {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
-  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: var(--color-forest);
   background: rgba(26, 61, 46, 0.08);
   border-radius: 999px;

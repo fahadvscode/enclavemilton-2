@@ -2,9 +2,10 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(253, 252, 250, 0.95);
-  backdrop-filter: blur(8px);
+  background: rgba(253, 252, 250, 0.92);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 0 rgba(26, 61, 46, 0.04);
 }
 
 .inner {
@@ -12,37 +13,39 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 1rem 0;
+  padding: 0.875rem 0;
 }
 
 .logo {
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .logoMark {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.35rem;
   font-weight: 600;
   color: var(--color-forest);
+  letter-spacing: -0.02em;
 }
 
 .logoSub {
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   color: var(--color-stone-light);
+  font-weight: 600;
 }
 
 .nav {
   display: none;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .navLink {
-  font-size: 0.9375rem;
+  font-size: 0.9rem;
   font-weight: 500;
   text-decoration: none;
   color: var(--color-stone);

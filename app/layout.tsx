@@ -1,10 +1,26 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Providers } from "@/components/Providers";
 import { SITE_URL } from "@/lib/floor-plans";
+import { IMAGES } from "@/lib/images";
 import { organizationSchema } from "@/lib/schema";
 import "./globals.css";
+
+const serif = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const sans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -18,13 +34,14 @@ export const metadata: Metadata = {
     siteName: "The Enclave Milton",
     locale: "en_CA",
     type: "website",
+    images: [{ url: IMAGES.hero, width: 1200, height: 630, alt: "The Enclave Milton townhomes" }],
   },
   robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-CA">
+    <html lang="en-CA" className={`${serif.variable} ${sans.variable}`}>
       <head>
         <script
           type="application/ld+json"
