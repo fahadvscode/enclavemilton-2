@@ -16,6 +16,15 @@
   }
 }
 
+.formName {
+  margin: 0 0 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-forest);
+}
+
 .badgeRow {
   display: flex;
   flex-wrap: wrap;

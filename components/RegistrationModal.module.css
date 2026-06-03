@@ -40,6 +40,15 @@
   background: var(--color-cream);
 }
 
+.formName {
+  margin: 0 0 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-sage);
+}
+
 .intro {
   margin: 0 0 1.5rem;
   font-size: 0.9375rem;

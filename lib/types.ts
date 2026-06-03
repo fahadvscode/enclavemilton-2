@@ -41,4 +41,5 @@ export interface RegistrationPayload {
   model: string;
   collection?: string;
   source?: string;
+  formName?: string;
 }

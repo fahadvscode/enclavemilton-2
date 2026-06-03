@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { REGISTRATION_FORM_NAME } from "@/lib/registration-form";
 import { siteData } from "@/lib/floor-plans";
 import { RegistrationFormFields } from "./RegistrationFormFields";
 import styles from "./RegistrationModal.module.css";
@@ -39,6 +40,7 @@ export function RegistrationModal({
           ×
         </button>
 
+        <p className={styles.formName}>{REGISTRATION_FORM_NAME}</p>
         <h2 id="register-title">Register for floor plans &amp; pricing</h2>
         <p className={styles.intro}>
           Get the complete floor plan PDF and current model pricing for The Enclave Milton.

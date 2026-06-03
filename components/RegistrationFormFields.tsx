@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { getRegistrationModelOptions } from "@/lib/registration-options";
+import { REGISTRATION_FORM_NAME } from "@/lib/registration-form";
 import { siteData } from "@/lib/floor-plans";
 import styles from "./RegistrationFormFields.module.css";
 
@@ -51,6 +52,7 @@ export function RegistrationFormFields({
           model: data.get("model"),
           collection: data.get("collection"),
           source,
+          formName: data.get("formName"),
         }),
       });
 
@@ -91,8 +93,11 @@ export function RegistrationFormFields({
     <form
       onSubmit={handleSubmit}
       className={`${styles.form} ${variant === "home" ? styles.formHome : styles.formModal}`}
+      name={REGISTRATION_FORM_NAME}
+      aria-label={REGISTRATION_FORM_NAME}
       noValidate
     >
+      <input type="hidden" name="formName" value={REGISTRATION_FORM_NAME} />
       <div className={styles.row}>
         <label>
           <span>First name</span>

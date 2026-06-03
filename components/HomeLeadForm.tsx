@@ -1,5 +1,6 @@
 "use client";
 
+import { REGISTRATION_FORM_NAME } from "@/lib/registration-form";
 import { siteData } from "@/lib/floor-plans";
 import { RegistrationFormFields } from "./RegistrationFormFields";
 import styles from "./HomeLeadForm.module.css";
@@ -16,6 +17,7 @@ export function HomeLeadForm() {
 
   return (
     <aside id="register" className={styles.card} aria-labelledby="home-register-heading">
+      <p className={styles.formName}>{REGISTRATION_FORM_NAME}</p>
       <div className={styles.badgeRow}>
         <span className={styles.liveBadge}>Now registering</span>
         <span className={styles.meta}>{totalModels} floor plans · Occupancy {siteData.project.occupancy}</span>
