@@ -40,4 +40,5 @@ export interface RegistrationPayload {
   phone: string;
   model: string;
   collection?: string;
+  source?: string;
 }

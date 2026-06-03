@@ -29,7 +29,13 @@ export const metadata: Metadata = {
     template: "%s | The Enclave Milton",
   },
   description:
-    "The Enclave by Sundial Homes — freehold townhomes in southeast Milton with no monthly maintenance fees. Village back-to-back and Park traditional designs from 953 to 2,843 sq ft. From $599,990.",
+    "The Enclave by Sundial Homes — new freehold townhomes in southeast Milton, Ontario with no monthly maintenance fees. Register for floor plans and pricing. 15 models from 953 to 2,843 sq ft. From $599,990.",
+  keywords: [
+    "The Enclave Milton",
+    "new townhomes Milton",
+    "freehold townhomes Ontario",
+    "Sundial Homes",
+  ],
   openGraph: {
     siteName: "The Enclave Milton",
     locale: "en_CA",

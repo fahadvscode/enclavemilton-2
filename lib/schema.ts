@@ -74,3 +74,45 @@ export function projectOfferSchema() {
     },
   };
 }
+
+export function homeFaqSchema(
+  items: Array<{ question: string; answer: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+export function webPageSchema(title: string, description: string, path = "") {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: `${SITE_URL}${path}`,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "The Enclave Milton",
+      url: SITE_URL,
+    },
+    about: {
+      "@type": "Residence",
+      name: "The Enclave Milton Townhomes",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Milton",
+        addressRegion: "ON",
+        addressCountry: "CA",
+      },
+    },
+  };
+}

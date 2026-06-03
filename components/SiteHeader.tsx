@@ -24,8 +24,8 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Link href="/floor-plans#register" className="btn btn-gold">
-          Register
+        <Link href="/#register" className="btn btn-gold">
+          Get pricing
         </Link>
       </div>
     </header>

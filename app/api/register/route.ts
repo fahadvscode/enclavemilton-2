@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const { firstName, lastName, email, phone, model, collection } = body;
+  const { firstName, lastName, email, phone, model, collection, source } = body;
 
   if (!firstName?.trim() || !lastName?.trim() || !email?.trim() || !phone?.trim() || !model?.trim()) {
     return NextResponse.json({ error: "All fields are required." }, { status: 400 });
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     model: model.trim(),
     collection: collection?.trim() ?? "",
     submittedAt: new Date().toISOString(),
-    source: "enclavemilton.com",
+    source: source?.trim() || "enclavemilton.com",
   };
 
   // Hook for CRM / email automation (e.g. Zapier webhook, Resend, HubSpot).
