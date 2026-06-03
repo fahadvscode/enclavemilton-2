@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel": "vercel",
+    "vercel:login": "vercel login",
+    "vercel:link": "vercel link",
+    "vercel:env": "vercel env pull .env.local",
+    "vercel:deploy": "vercel --prod",
+    "supabase:setup-table": "node scripts/setup-supabase-table.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.107.0",
@@ -18,6 +24,8 @@
     "@types/node": "^22.15.21",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
-    "typescript": "^5.8.3"
+    "postgres": "^3.4.9",
+    "typescript": "^5.8.3",
+    "vercel": "^54.7.1"
   }
 }

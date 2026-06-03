@@ -1,4 +1,5 @@
--- Run in Supabase Dashboard → SQL Editor, or via Supabase CLI: supabase db push
+-- Paste this entire file in Supabase → SQL Editor → Run
+-- Dashboard: https://supabase.com/dashboard/project/cfzuypbljirmibmxpabi/sql/new
 
 create table if not exists public.enclave (
   id uuid primary key default gen_random_uuid(),
@@ -20,4 +21,4 @@ create index if not exists enclave_created_at_idx on public.enclave (created_at 
 
 alter table public.enclave enable row level security;
 
--- No public policies: inserts go through the Next.js API using the service role key only.
+-- Refresh Table Editor (left sidebar) — you should see: public.enclave

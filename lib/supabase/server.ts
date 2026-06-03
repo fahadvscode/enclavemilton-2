@@ -1,5 +1,8 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
+/** Supabase table for lead form submissions */
+export const LEADS_TABLE = "enclave";
+
 export type RegistrationRow = {
   id: string;
   first_name: string;
@@ -46,7 +49,7 @@ export async function insertRegistration(
   }
 
   const { data, error } = await supabase
-    .from("registrations")
+    .from(LEADS_TABLE)
     .insert(row)
     .select("id")
     .single();
