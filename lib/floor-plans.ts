@@ -3,7 +3,7 @@ import type { Collection, FloorPlanModel, FloorPlansData } from "./types";
 
 export const siteData = floorPlansData as FloorPlansData;
 
-export const SITE_URL = "https://enclavemilton.com";
+export const SITE_URL = "https://www.enclavemilton.com";
 
 export function formatSqft(model: FloorPlanModel): string {
   if (model.sqftMin != null && model.sqftMax != null) {
