@@ -1,0 +1,44 @@
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.tile {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tileLarge {
+  grid-column: span 1;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.desc {
+  flex: 1;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tile h3 {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 900px) {
+  .bento {
+    grid-template-columns: 1fr;
+  }
+}

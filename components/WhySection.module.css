@@ -1,0 +1,32 @@
+.list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.list li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.list h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.list p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+@media (max-width: 700px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,69 +1,40 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
-import { Providers } from "@/components/Providers";
-import { SITE_URL } from "@/lib/floor-plans";
-import { IMAGES } from "@/lib/images";
-import { organizationSchema } from "@/lib/schema";
+import { Sora, Source_Sans_3 } from "next/font/google";
+import TopNav from "@/components/TopNav";
+import SiteFooter from "@/components/SiteFooter";
+import MobileStickyCta from "@/components/MobileStickyCta";
+import { buildMetadata, defaultDescription } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
-const serif = Cormorant_Garamond({
+const sora = Sora({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-serif",
   display: "swap",
+  variable: "--font-sora",
 });
 
-const sans = DM_Sans({
+const sourceSans = Source_Sans_3({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-sans",
   display: "swap",
+  variable: "--font-source",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: "The Enclave Milton | New Townhomes in Milton, ON",
-    template: "%s | The Enclave Milton",
-  },
-  description:
-    "The Enclave by Sundial Homes — new freehold townhomes in southeast Milton, Ontario with no monthly maintenance fees. Register for floor plans and pricing. 15 models from 953 to 2,843 sq ft. From $599,990.",
-  keywords: [
-    "The Enclave Milton",
-    "new townhomes Milton",
-    "freehold townhomes Ontario",
-    "Sundial Homes",
-  ],
-  openGraph: {
-    siteName: "The Enclave Milton",
-    locale: "en_CA",
-    type: "website",
-    images: [{ url: IMAGES.hero, width: 1200, height: 630, alt: "The Enclave Milton townhomes" }],
-  },
-  robots: { index: true, follow: true },
-  icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/apple-icon.svg", type: "image/svg+xml" }],
-  },
+  ...buildMetadata({
+    pageTitle: "Now Selling",
+    description: defaultDescription,
+  }),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-CA" className={`${serif.variable} ${sans.variable}`}>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
-        />
-      </head>
+    <html lang="en-CA" className={`${sora.variable} ${sourceSans.variable}`}>
       <body>
-        <Providers>
-          <SiteHeader />
-          <main>{children}</main>
-          <SiteFooter />
-        </Providers>
+        <TopNav />
+        <main>{children}</main>
+        <SiteFooter />
+        <MobileStickyCta />
       </body>
     </html>
   );

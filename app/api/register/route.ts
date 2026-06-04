@@ -34,7 +34,7 @@ export async function POST(request: Request) {
     model: model.trim(),
     collection: collection?.trim() ?? "",
     submittedAt: new Date().toISOString(),
-    source: source?.trim() || "enclavemilton.com",
+    source: source?.trim() || "theenclavemiltontowns.com",
     formName: formName?.trim() || REGISTRATION_FORM_NAME,
   };
 

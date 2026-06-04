@@ -1,0 +1,33 @@
+.list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0 1rem;
+}
+
+.item summary {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--primary);
+  padding: 1rem 0;
+  cursor: pointer;
+  list-style-position: outside;
+}
+
+.item p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.item[open] summary {
+  color: var(--accent);
+}

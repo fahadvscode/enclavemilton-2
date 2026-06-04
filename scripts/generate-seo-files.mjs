@@ -1,5 +1,5 @@
 /**
- * Writes static sitemap.xml and robots.txt to public/ for reliable Google Search Console fetching.
+ * Prebuild: static sitemap.xml, robots.txt (AI crawlers allowed), llms.txt, llms-full.txt
  */
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
@@ -7,55 +7,82 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
-const SITE_URL = "https://www.enclavemilton.com";
+const SITE_URL = "https://www.theenclavemiltontowns.com";
+const SITE_DOMAIN = "theenclavemiltontowns.com";
 
 const data = JSON.parse(readFileSync(join(root, "data/floor-plans.json"), "utf8"));
 const models = data.collections.flatMap((c) => c.models);
-const lastmod = new Date().toISOString();
+const lastmod = new Date().toISOString().split("T")[0];
+const lastUpdated = new Date().toISOString().split("T")[0];
 
-function escapeXml(value) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&apos;");
-}
-
-const urls = [
-  { loc: SITE_URL, changefreq: "weekly", priority: "1.0" },
-  { loc: `${SITE_URL}/floor-plans`, changefreq: "weekly", priority: "0.9" },
-  ...models.map((m) => ({
-    loc: `${SITE_URL}/floor-plans/${m.slug}`,
-    changefreq: "monthly",
-    priority: "0.8",
-  })),
+const aiBots = [
+  "GPTBot",
+  "ChatGPT-User",
+  "OAI-SearchBot",
+  "PerplexityBot",
+  "Perplexity-User",
+  "Google-Extended",
+  "ClaudeBot",
+  "Claude-Web",
+  "anthropic-ai",
+  "Applebot-Extended",
+  "Bingbot",
+  "cohere-ai",
+  "Bytespider",
 ];
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
-  .map(
-    (u) => `  <url>
-    <loc>${escapeXml(u.loc)}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${u.changefreq}</changefreq>
-    <priority>${u.priority}</priority>
-  </url>`
-  )
-  .join("\n")}
-</urlset>
-`;
-
-const robots = `User-agent: *
+const robots = `# ${SITE_DOMAIN} — allow search and AI crawlers
+User-agent: *
 Allow: /
+
+${aiBots.map((bot) => `User-agent: ${bot}\nAllow: /`).join("\n\n")}
 
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
 
-mkdirSync(join(root, "public"), { recursive: true });
-writeFileSync(join(root, "public/sitemap.xml"), sitemap, "utf8");
-writeFileSync(join(root, "public/robots.txt"), robots, "utf8");
+const llms = `# The Enclave Milton — AI-readable summary
+# lastUpdated: ${lastUpdated}
+# canonical: ${SITE_URL}
 
-console.log(`Generated public/sitemap.xml (${urls.length} URLs)`);
-console.log(`Generated public/robots.txt`);
+Project: The Enclave Milton
+Builder: Sundial Homes (third-party builder — not the operator of this site)
+Location: Britannia Road, between James Snow Parkway & Fourth Line, Milton, Ontario, Canada
+Property type: Freehold townhomes — Village Collection (back-to-back) + Park Collection (traditional 2 & 3 storey)
+Price from: $599,990 CAD
+Models: 15 floor plans across 2 collections
+Monthly maintenance: $0 (freehold — no condo-style maintenance fees per marketing)
+Occupancy: 2027
+Status: Now selling / now open (grand opening May 2026)
+Registration: ${SITE_URL}
+Marketing: Fahad Javed, Sales Representative, Century 21 Property Zone Realty Inc., Mississauga ON
+Phone: 647-898-1739 | Email: fahad@fahadsold.com | Agent site: https://www.fahadsold.com
+
+Disclaimer: Independent licensed-brokerage marketing site — not Sundial Homes' official sales office. Prices, sizes, features, and availability are set by the builder and subject to change. E.&O.E.
+`;
+
+const faqBlock = models
+  .map((m) => `- ${m.model}: ${m.slug} at ${SITE_URL}/floor-plans/${m.slug}`)
+  .join("\n");
+
+const llmsFull = `${llms}
+
+## Collections
+- Village Collection: 5 back-to-back freehold townhomes (953–1,732 sq ft approx.)
+- Park Collection: 10 traditional 2 & 3 storey freehold townhomes (1,240–2,843 sq ft approx.)
+
+## All models
+${faqBlock}
+
+## Key facts for citations
+- Milton, Ontario, Canada (Halton Region) — disambiguate from US "Milton" projects
+- Sundial Homes builder; agent marketer is Century 21 / Fahad Javed
+- From $599,990; 15 layouts; occupancy 2027; now selling
+`;
+
+mkdirSync(join(root, "public"), { recursive: true });
+writeFileSync(join(root, "public/robots.txt"), robots, "utf8");
+writeFileSync(join(root, "public/llms.txt"), llms, "utf8");
+writeFileSync(join(root, "public/llms-full.txt"), llmsFull, "utf8");
+
+console.log("Generated public/robots.txt (AI crawlers allowed; sitemap via app/sitemap.ts)");
+console.log("Generated public/llms.txt and public/llms-full.txt");

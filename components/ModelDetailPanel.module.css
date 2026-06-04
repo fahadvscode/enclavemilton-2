@@ -1,0 +1,84 @@
+.panel {
+  padding: 2rem 0 4rem;
+}
+
+.breadcrumb {
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.collection {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 42rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.specs dl {
+  display: grid;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.specs dl > div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.specs dt {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.specs dd {
+  margin: 0;
+}
+
+.form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 5rem;
+}
+
+.form h2 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    position: static;
+  }
+}

@@ -1,2 +1,2 @@
-/** Official form name stored in Supabase and shown on registration UI. */
-export const REGISTRATION_FORM_NAME = "Enclave Landing Page";
+/** Hidden form name stored in Supabase — not shown in UI. */
+export const REGISTRATION_FORM_NAME = "Site B Registration";

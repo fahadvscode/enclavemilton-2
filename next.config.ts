@@ -1,18 +1,20 @@
 import type { NextConfig } from "next";
+import bundleAnalyzer from "@next/bundle-analyzer";
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   async headers() {
     return [
       {
-        source: "/sitemap.xml",
-        headers: [
-          { key: "Content-Type", value: "application/xml; charset=utf-8" },
-          { key: "Cache-Control", value: "public, max-age=3600" },
-        ],
+        source: "/robots.txt",
+        headers: [{ key: "Content-Type", value: "text/plain; charset=utf-8" }],
       },
       {
-        source: "/robots.txt",
+        source: "/llms.txt",
         headers: [{ key: "Content-Type", value: "text/plain; charset=utf-8" }],
       },
     ];
@@ -33,4 +35,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);
