@@ -23,6 +23,14 @@ export default function HeroBlock() {
       </div>
       <div className={`container ${styles.content}`}>
         <div className={styles.copy}>
+          <Image
+            src={IMAGES.logo}
+            alt="The Enclave — Townhomes and Detached Homes"
+            width={280}
+            height={72}
+            className={styles.logo}
+            priority
+          />
           <p className={styles.badge}>Now selling · Milton, Ontario</p>
           <h1 id="hero-heading">
             The Enclave Milton — Freehold Townhomes from $599,990 · $0 Monthly Maintenance ·
@@ -38,10 +46,12 @@ export default function HeroBlock() {
             </Link>
           </div>
         </div>
-        <div id="register" className={styles.card}>
-          <h2 className={styles.cardTitle}>Register for floor plans &amp; pricing</h2>
+        <aside id="register" className={styles.card} aria-labelledby="hero-form-title">
+          <h2 id="hero-form-title" className={styles.cardTitle}>
+            Register for floor plans &amp; pricing
+          </h2>
           <LeadForm idPrefix="hero" />
-        </div>
+        </aside>
       </div>
     </section>
   );

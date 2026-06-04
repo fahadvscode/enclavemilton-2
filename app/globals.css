@@ -1,21 +1,26 @@
 :root {
+  --brand-primary: #1e3b41;
+  --brand-secondary: #b6afa2;
+  --brand-white: #ffffff;
   --bg: #faf9f7;
   --text: #1e293b;
-  --primary: #0f172a;
-  --accent: #c45d3e;
-  --accent-hover: #a84a2f;
+  --primary: #1e3b41;
+  --accent: #1e3b41;
+  --accent-hover: #163238;
+  --secondary: #b6afa2;
+  --secondary-hover: #a39d92;
   --muted: #64748b;
   --line: #e2e8f0;
   --card: #ffffff;
   --hero-overlay: linear-gradient(
     105deg,
-    rgba(15, 23, 42, 0.88) 0%,
-    rgba(15, 23, 42, 0.55) 45%,
-    rgba(15, 23, 42, 0.25) 100%
+    rgba(30, 59, 65, 0.92) 0%,
+    rgba(30, 59, 65, 0.62) 48%,
+    rgba(30, 59, 65, 0.28) 100%
   );
   --radius: 12px;
   --radius-lg: 16px;
-  --shadow: 0 12px 40px rgba(15, 23, 42, 0.12);
+  --shadow: 0 12px 40px rgba(30, 59, 65, 0.14);
   --font-heading: var(--font-sora), system-ui, sans-serif;
   --font-body: var(--font-source), system-ui, sans-serif;
   --sticky-cta-height: 56px;
@@ -71,7 +76,7 @@ p {
 }
 
 a {
-  color: var(--accent);
+  color: var(--primary);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
@@ -86,7 +91,7 @@ img {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--secondary);
   outline-offset: 2px;
 }
 
@@ -137,24 +142,34 @@ img {
 }
 
 .btn--primary {
-  background: var(--accent);
-  color: #fff;
+  background: var(--brand-primary);
+  color: var(--brand-white);
 }
 
 .btn--primary:hover {
   background: var(--accent-hover);
-  color: #fff;
+  color: var(--brand-white);
+}
+
+.btn--secondary {
+  background: var(--brand-secondary);
+  color: var(--brand-primary);
+}
+
+.btn--secondary:hover {
+  background: var(--secondary-hover);
+  color: var(--brand-primary);
 }
 
 .btn--ghost {
   background: transparent;
-  color: #fff;
+  color: var(--brand-white);
   border: 1px solid rgba(255, 255, 255, 0.65);
 }
 
 .btn--ghost:hover {
   background: rgba(255, 255, 255, 0.12);
-  color: #fff;
+  color: var(--brand-white);
 }
 
 .btn--outline {
@@ -164,8 +179,8 @@ img {
 }
 
 .btn--outline:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .btn:disabled {

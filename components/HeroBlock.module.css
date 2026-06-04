@@ -1,8 +1,8 @@
 .hero {
   position: relative;
-  min-height: min(92vh, 820px);
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
+  margin-bottom: 0;
 }
 
 .media {
@@ -25,17 +25,25 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr min(400px, 38%);
-  align-items: end;
-  gap: 2rem;
-  padding: 6rem 0 0;
-  min-height: inherit;
+  grid-template-columns: minmax(0, 1fr) min(380px, 34%);
+  align-items: start;
+  gap: 2.5rem 3rem;
+  padding: 5rem 0 3rem;
+  min-height: min(88vh, 780px);
 }
 
 .copy {
-  padding-bottom: 8rem;
-  color: #fff;
-  max-width: 36rem;
+  color: var(--brand-white);
+  max-width: 40rem;
+  min-width: 0;
+}
+
+.logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(280px, 72vw);
+  margin-bottom: 1.25rem;
 }
 
 .badge {
@@ -46,12 +54,13 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  background: rgba(196, 93, 62, 0.9);
+  color: var(--brand-primary);
+  background: var(--brand-secondary);
   border-radius: 4px;
 }
 
 .copy h1 {
-  color: #fff;
+  color: var(--brand-white);
   margin-bottom: 1rem;
 }
 
@@ -73,36 +82,53 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   padding: 1.5rem;
-  margin-bottom: -3rem;
-  align-self: end;
+  margin: 0;
+  align-self: start;
+  width: 100%;
+  max-width: 380px;
+  justify-self: end;
 }
 
 .cardTitle {
   font-size: 1.125rem;
   margin: 0 0 1rem;
+  color: var(--primary);
 }
 
-@media (max-width: 900px) {
+/* Clear space before next section — no negative overlap */
+.hero::after {
+  content: "";
+  display: block;
+  height: 0;
+}
+
+@media (max-width: 1024px) {
   .content {
     grid-template-columns: 1fr;
-    padding-top: 5rem;
+    min-height: auto;
+    padding-bottom: 2.5rem;
+  }
+
+  .card {
+    max-width: none;
+    justify-self: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 4.5rem 0 2rem;
+  }
+
+  .card {
+    display: none;
   }
 
   .copy {
     padding-bottom: 1rem;
   }
 
-  .card {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    display: none;
-  }
-
-  .copy {
-    padding-bottom: 5rem;
+  .logo {
+    max-width: 240px;
   }
 }

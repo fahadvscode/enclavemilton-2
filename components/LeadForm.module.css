@@ -49,7 +49,7 @@
 .field select:focus {
   border-color: var(--accent);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(196, 93, 62, 0.2);
+  box-shadow: 0 0 0 3px rgba(30, 59, 65, 0.2);
 }
 
 .disclaimer {

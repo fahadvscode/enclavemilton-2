@@ -7,6 +7,9 @@ const u = (id: string, w: number) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
 export const IMAGES = {
+  /** Official Enclave wordmark (dark teal background) */
+  logo: "https://cfzuypbljirmibmxpabi.supabase.co/storage/v1/object/public/rental-documents/1780533510331_enclave_logo.png",
+
   /** Sundial community rendering — homepage & floor plans banner */
   hero:
     "https://cfzuypbljirmibmxpabi.supabase.co/storage/v1/object/public/rental-documents/1780268468620_Screenshot-2026-05-13-at-16.59.20.png",
