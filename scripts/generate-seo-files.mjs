@@ -54,8 +54,6 @@ Monthly maintenance: $0 (freehold — no condo-style maintenance fees per market
 Occupancy: 2027
 Status: Now selling / now open (grand opening May 2026)
 Registration: ${SITE_URL}
-
-Disclaimer: Independent marketing site — not Sundial Homes' official sales office. Not affiliated with or endorsed by the builder. Prices, sizes, features, and availability are set by the builder and subject to change. E.&O.E.
 `;
 
 const faqBlock = models
