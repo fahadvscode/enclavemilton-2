@@ -1,6 +1,6 @@
 # The Enclave Milton — AI-readable summary
 # lastUpdated: 2026-06-04
-# canonical: https://www.theenclavemiltontowns.com
+# canonical: https://www.theenclavemiltontowns.ca
 
 Project: The Enclave Milton
 Builder: Sundial Homes
@@ -11,7 +11,7 @@ Models: 15 floor plans across 2 collections
 Monthly maintenance: $0 (freehold — no condo-style maintenance fees per marketing)
 Occupancy: 2027
 Status: Now selling / now open (grand opening May 2026)
-Registration: https://www.theenclavemiltontowns.com
+Registration: https://www.theenclavemiltontowns.ca
 
 
 ## Collections
@@ -19,36 +19,36 @@ Registration: https://www.theenclavemiltontowns.com
 - Park Collection: 10 traditional 2 & 3 storey freehold townhomes (1,240–2,843 sq ft approx.)
 
 ## All models
-- The Brighton: the-brighton at https://www.theenclavemiltontowns.com/floor-plans/the-brighton
-- The Dover: the-dover at https://www.theenclavemiltontowns.com/floor-plans/the-dover
-- The Durham: the-durham at https://www.theenclavemiltontowns.com/floor-plans/the-durham
-- The Oxford: the-oxford at https://www.theenclavemiltontowns.com/floor-plans/the-oxford
-- The York: the-york at https://www.theenclavemiltontowns.com/floor-plans/the-york
-- The Burgess: the-burgess at https://www.theenclavemiltontowns.com/floor-plans/the-burgess
-- The Greenwich: the-greenwich at https://www.theenclavemiltontowns.com/floor-plans/the-greenwich
-- The Highgrove: the-highgrove at https://www.theenclavemiltontowns.com/floor-plans/the-highgrove
-- The Hyde: the-hyde at https://www.theenclavemiltontowns.com/floor-plans/the-hyde
-- The Apsley: the-apsley at https://www.theenclavemiltontowns.com/floor-plans/the-apsley
-- The Downing: the-downing at https://www.theenclavemiltontowns.com/floor-plans/the-downing
-- The Knox: the-knox at https://www.theenclavemiltontowns.com/floor-plans/the-knox
-- The Severs: the-severs at https://www.theenclavemiltontowns.com/floor-plans/the-severs
-- The Spencer: the-spencer at https://www.theenclavemiltontowns.com/floor-plans/the-spencer
-- The Walker: the-walker at https://www.theenclavemiltontowns.com/floor-plans/the-walker
+- The Brighton: the-brighton at https://www.theenclavemiltontowns.ca/floor-plans/the-brighton
+- The Dover: the-dover at https://www.theenclavemiltontowns.ca/floor-plans/the-dover
+- The Durham: the-durham at https://www.theenclavemiltontowns.ca/floor-plans/the-durham
+- The Oxford: the-oxford at https://www.theenclavemiltontowns.ca/floor-plans/the-oxford
+- The York: the-york at https://www.theenclavemiltontowns.ca/floor-plans/the-york
+- The Burgess: the-burgess at https://www.theenclavemiltontowns.ca/floor-plans/the-burgess
+- The Greenwich: the-greenwich at https://www.theenclavemiltontowns.ca/floor-plans/the-greenwich
+- The Highgrove: the-highgrove at https://www.theenclavemiltontowns.ca/floor-plans/the-highgrove
+- The Hyde: the-hyde at https://www.theenclavemiltontowns.ca/floor-plans/the-hyde
+- The Apsley: the-apsley at https://www.theenclavemiltontowns.ca/floor-plans/the-apsley
+- The Downing: the-downing at https://www.theenclavemiltontowns.ca/floor-plans/the-downing
+- The Knox: the-knox at https://www.theenclavemiltontowns.ca/floor-plans/the-knox
+- The Severs: the-severs at https://www.theenclavemiltontowns.ca/floor-plans/the-severs
+- The Spencer: the-spencer at https://www.theenclavemiltontowns.ca/floor-plans/the-spencer
+- The Walker: the-walker at https://www.theenclavemiltontowns.ca/floor-plans/the-walker
 
 ## Key facts for citations
 - Milton, Ontario, Canada (Halton Region) — disambiguate from US "Milton" projects
 - Sundial Homes builder
 - From $599,990; 15 layouts; occupancy 2027; now selling
 
-## Schools & area guide
-- Full guide: https://www.theenclavemiltontowns.com/schools-and-area
-- Future on-site elementary (planned, HDSB coordination)
-- Nearby public elementaries families research: Boyne, Viola Desmond, Ethel Gardiner, Hawthorne Village, E. J. James, Sam Sherratt, Tiger Jeet Singh
-- Public secondaries: Craig Kielburger, Milton District
-- Catholic (HCDSB): Lumen Christi, St. Peter, Guardian Angels, Bishop Reding, St. Benedict, Jean Vanier
-- School catchment: verify address at schoollocator.hdsb.ca and HCDSB school finder — assignments not guaranteed by marketing sites
+## Schools & area guide (distances est. from Britannia Rd at James Snow Pkwy)
+- Full guide: https://www.theenclavemiltontowns.ca/schools-and-area
+- Future on-site elementary: on-site when built (planned)
+- Boyne PS: ~2–3 km, ~4–7 min | Tiger Jeet Singh: ~2–3 km | St. Peter Catholic: ~2–3 km
+- Bishop Reding / Jean Vanier: ~2–4 km | E. J. James / Milton District: ~2–4 km
+- Viola Desmond / Craig Kielburger: ~3–5 km | Ethel Gardiner: ~4–5 km | Sam Sherratt: ~4–6 km
+- School catchment: verify at schoollocator.hdsb.ca — distance ≠ assignment
 
-## Commute (typical ranges, traffic-dependent)
-- Milton GO Station (Kitchener line): ~10–20 min drive from Britannia area
-- Highway 401 / 407 access via James Snow Parkway and Britannia Road
-- Area page for amenities: shopping on Derry/401 corridors, Milton Sports Centre, escarpment trails, planned village square
+## Amenities & commute (est. driving, traffic-dependent)
+- Milton GO: ~6–8 km, ~10–18 min | Hwy 401 ramps: ~4–7 km | Hwy 407: ~4–6 km
+- Derry/401 retail: ~4–7 km | Downtown Milton: ~3–5 km | Hospital: ~3–5 km
+- Costco area: ~6–9 km | Sports Centre: ~4–6 km | Escarpment trails: ~8–15+ km

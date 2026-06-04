@@ -7,8 +7,8 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
-const SITE_URL = "https://www.theenclavemiltontowns.com";
-const SITE_DOMAIN = "theenclavemiltontowns.com";
+const SITE_URL = "https://www.theenclavemiltontowns.ca";
+const SITE_DOMAIN = "theenclavemiltontowns.ca";
 
 const data = JSON.parse(readFileSync(join(root, "data/floor-plans.json"), "utf8"));
 const models = data.collections.flatMap((c) => c.models);
@@ -74,18 +74,18 @@ ${faqBlock}
 - Sundial Homes builder
 - From $599,990; 15 layouts; occupancy 2027; now selling
 
-## Schools & area guide
+## Schools & area guide (distances est. from Britannia Rd at James Snow Pkwy)
 - Full guide: ${SITE_URL}/schools-and-area
-- Future on-site elementary (planned, HDSB coordination)
-- Nearby public elementaries families research: Boyne, Viola Desmond, Ethel Gardiner, Hawthorne Village, E. J. James, Sam Sherratt, Tiger Jeet Singh
-- Public secondaries: Craig Kielburger, Milton District
-- Catholic (HCDSB): Lumen Christi, St. Peter, Guardian Angels, Bishop Reding, St. Benedict, Jean Vanier
-- School catchment: verify address at schoollocator.hdsb.ca and HCDSB school finder — assignments not guaranteed by marketing sites
+- Future on-site elementary: on-site when built (planned)
+- Boyne PS: ~2–3 km, ~4–7 min | Tiger Jeet Singh: ~2–3 km | St. Peter Catholic: ~2–3 km
+- Bishop Reding / Jean Vanier: ~2–4 km | E. J. James / Milton District: ~2–4 km
+- Viola Desmond / Craig Kielburger: ~3–5 km | Ethel Gardiner: ~4–5 km | Sam Sherratt: ~4–6 km
+- School catchment: verify at schoollocator.hdsb.ca — distance ≠ assignment
 
-## Commute (typical ranges, traffic-dependent)
-- Milton GO Station (Kitchener line): ~10–20 min drive from Britannia area
-- Highway 401 / 407 access via James Snow Parkway and Britannia Road
-- Area page for amenities: shopping on Derry/401 corridors, Milton Sports Centre, escarpment trails, planned village square
+## Amenities & commute (est. driving, traffic-dependent)
+- Milton GO: ~6–8 km, ~10–18 min | Hwy 401 ramps: ~4–7 km | Hwy 407: ~4–6 km
+- Derry/401 retail: ~4–7 km | Downtown Milton: ~3–5 km | Hospital: ~3–5 km
+- Costco area: ~6–9 km | Sports Centre: ~4–6 km | Escarpment trails: ~8–15+ km
 `;
 
 mkdirSync(join(root, "public"), { recursive: true });

@@ -1,8 +1,8 @@
-# The Enclave Milton — Site B (`theenclavemiltontowns.com`)
+# The Enclave Milton — Site B (`theenclavemiltontowns.ca`)
 
 High-converting alternate landing site for **The Enclave Milton** by Sundial Homes. Shares lead backend with [enclavemilton.com](https://www.enclavemilton.com) (Site A) but uses a distinct design, copy, and SEO/AEO layer.
 
-**Canonical host:** `https://www.theenclavemiltontowns.com`
+**Canonical host:** `https://www.theenclavemiltontowns.ca`
 
 ## Multi-site SERP strategy
 
@@ -25,7 +25,7 @@ Copy `.env.example` to `.env.local` for local development.
 ## Supabase leads
 
 - **Table:** `public.enclave` (shared with Site A)
-- **`source`:** `theenclavemiltontowns.com`
+- **`source`:** `theenclavemiltontowns.ca`
 - **`form_name`:** `Site B Registration` (hidden field — not shown in UI)
 
 Payload shape on insert:
@@ -38,7 +38,7 @@ Payload shape on insert:
   "phone": "",
   "model": "",
   "collection": "",
-  "source": "theenclavemiltontowns.com",
+  "source": "theenclavemiltontowns.ca",
   "form_name": "Site B Registration"
 }
 ```
@@ -54,8 +54,8 @@ Build succeeds without Supabase env; leads are logged to the server console inst
 **Confirm your host/CDN is not blocking AI bots:** In Vercel, check Firewall / WAF rules. In Cloudflare, review Bot Fight Mode and custom blocks. Test with:
 
 ```bash
-curl -A "GPTBot" -I https://www.theenclavemiltontowns.com/
-curl -A "PerplexityBot" -I https://www.theenclavemiltontowns.com/llms.txt
+curl -A "GPTBot" -I https://www.theenclavemiltontowns.ca/
+curl -A "PerplexityBot" -I https://www.theenclavemiltontowns.ca/llms.txt
 ```
 
 Expect `200` responses, not `403`.
@@ -64,10 +64,10 @@ Expect `200` responses, not `403`.
 
 1. Import repo or `vercel link`
 2. Set env vars above for Production
-3. Add domain `www.theenclavemiltontowns.com` (redirect apex → www)
+3. Add domain `www.theenclavemiltontowns.ca` (redirect apex → www)
 4. Deploy: `npm run vercel:deploy` or push to main
-5. **Search Console:** add property `https://www.theenclavemiltontowns.com`, submit sitemap  
-   `https://www.theenclavemiltontowns.com/sitemap.xml`
+5. **Search Console:** add property `https://www.theenclavemiltontowns.ca`, submit sitemap  
+   `https://www.theenclavemiltontowns.ca/sitemap.xml`
 
 ## Scripts
 

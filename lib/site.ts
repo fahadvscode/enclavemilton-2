@@ -1,4 +1,4 @@
-export const SITE_DOMAIN = "theenclavemiltontowns.com";
+export const SITE_DOMAIN = "theenclavemiltontowns.ca";
 export const SITE_URL = `https://www.${SITE_DOMAIN}`;
 export const SITE_B_SOURCE = SITE_DOMAIN;
 export const SITE_NAME = "The Enclave Milton";

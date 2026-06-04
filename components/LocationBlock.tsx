@@ -2,9 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   areaHighlights,
+  commuteFacts,
   communityLocation,
+  DISTANCE_REFERENCE,
   featuredSchoolNames,
   locationDisclaimer,
+  nearbySchools,
 } from "@/data/location";
 import { IMAGES } from "@/lib/images";
 import styles from "./LocationBlock.module.css";
@@ -45,14 +48,25 @@ export default function LocationBlock() {
         </div>
 
         <div className={styles.teaser}>
-          <h3>What schools do Milton families research near The Enclave?</h3>
+          <h3>How far are schools and Milton GO from The Enclave?</h3>
           <p>
-            Assignment is address-based through HDSB and HCDSB — not the sales centre. Families
-            commonly verify catchment for the planned on-site elementary, plus schools such as{" "}
-            {featuredSchoolNames.slice(1, 5).join(", ")}, and others.
+            Estimated driving distance from {DISTANCE_REFERENCE}. Assignment is address-based —
+            closest school ≠ your assigned school.
           </p>
+          <ul className={styles.distanceList}>
+            {nearbySchools
+              .filter((s) => featuredSchoolNames.includes(s.name))
+              .map((s) => (
+                <li key={s.name}>
+                  <strong>{s.name}</strong> — {s.distanceFromSite}
+                </li>
+              ))}
+            <li>
+              <strong>{commuteFacts[0].name}</strong> — {commuteFacts[0].distanceFromSite}
+            </li>
+          </ul>
           <Link href="/schools-and-area" className="btn btn--primary">
-            Full schools &amp; area guide
+            Full schools &amp; area guide with all distances
           </Link>
         </div>
 

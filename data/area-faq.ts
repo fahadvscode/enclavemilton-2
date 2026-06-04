@@ -134,4 +134,9 @@ export const AREA_FAQ: FaqItem[] = [
     answer:
       "Drive your commute to Milton GO and Highway 401 at rush hour, visit the HDSB and HCDSB locators with your address, read any active HDSB boundary review notices, and walk nearby parks. Ask your lawyer about closing dates relative to the school year if children are transferring mid-year.",
   },
+  {
+    question: "How far are schools and amenities from The Enclave Milton?",
+    answer:
+      "From Britannia Road at James Snow Parkway, estimated drives include Boyne Public School (~2–3 km), many elementaries at ~3–5 km, Milton GO (~6–8 km), Derry retail (~4–7 km), and downtown Milton (~3–5 km) — all traffic-dependent. See the full distance list on the schools & area guide page and confirm routes on Google Maps from your exact lot.",
+  },
 ];

@@ -3,8 +3,6 @@ import type { Collection, FloorPlanModel, FloorPlansData } from "./types";
 
 export const siteData = floorPlansData as FloorPlansData;
 
-export const SITE_URL = "https://www.theenclavemiltontowns.com";
-
 export function formatSqft(model: FloorPlanModel): string {
   if (model.sqftMin != null && model.sqftMax != null) {
     return `${model.sqftMin.toLocaleString()} – ${model.sqftMax.toLocaleString()} sq ft`;

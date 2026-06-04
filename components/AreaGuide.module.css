@@ -57,6 +57,13 @@
   margin: 0 0 0.5rem;
 }
 
+.distance {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.5rem;
+}
+
 .note {
   font-size: 0.9rem;
   color: var(--muted);

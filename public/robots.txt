@@ -1,4 +1,4 @@
-# theenclavemiltontowns.com — allow search and AI crawlers
+# theenclavemiltontowns.ca — allow search and AI crawlers
 User-agent: *
 Allow: /
 
@@ -41,4 +41,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://www.theenclavemiltontowns.com/sitemap.xml
+Sitemap: https://www.theenclavemiltontowns.ca/sitemap.xml

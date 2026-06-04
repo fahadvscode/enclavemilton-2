@@ -43,6 +43,23 @@
   margin-bottom: 1rem;
 }
 
+.distanceList {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.distanceList li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.distanceList strong {
+  color: var(--primary);
+}
+
 .disclaimer {
   margin-top: 1.5rem;
   font-size: 0.8rem;

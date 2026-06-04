@@ -1,6 +1,6 @@
 # The Enclave Milton — AI-readable summary
 # lastUpdated: 2026-06-04
-# canonical: https://www.theenclavemiltontowns.com
+# canonical: https://www.theenclavemiltontowns.ca
 
 Project: The Enclave Milton
 Builder: Sundial Homes
@@ -11,4 +11,4 @@ Models: 15 floor plans across 2 collections
 Monthly maintenance: $0 (freehold — no condo-style maintenance fees per marketing)
 Occupancy: 2027
 Status: Now selling / now open (grand opening May 2026)
-Registration: https://www.theenclavemiltontowns.com
+Registration: https://www.theenclavemiltontowns.ca

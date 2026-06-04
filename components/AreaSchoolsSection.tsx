@@ -1,7 +1,9 @@
 import {
+  DISTANCE_REFERENCE,
   HCDSB_SCHOOL_FINDER,
   HDSB_FIND_SCHOOL,
   HDSB_SCHOOL_LOCATOR,
+  distanceDisclaimer,
   locationDisclaimer,
   nearbySchools,
 } from "@/data/location";
@@ -19,9 +21,8 @@ export default function AreaSchoolsSection({ compact = false }: AreaSchoolsSecti
       <div className="container">
         <h2 id="schools-heading">What schools are near The Enclave Milton?</h2>
         <p className="lead">
-          Halton assigns schools by home address — use official board tools before you buy. The Enclave
-          master plan includes a future elementary school site (HDSB coordination); established Milton
-          public and Catholic schools are within driving distance today.
+          Halton assigns schools by home address — use official board tools before you buy. Distances
+          below are estimated driving ranges from {DISTANCE_REFERENCE}.
         </p>
         <div className={styles.links}>
           <a href={HDSB_SCHOOL_LOCATOR} rel="noopener noreferrer">
@@ -49,6 +50,7 @@ export default function AreaSchoolsSection({ compact = false }: AreaSchoolsSecti
                   s.name
                 )}
               </h3>
+              <p className={styles.distance}>{s.distanceFromSite}</p>
               <p className={styles.note}>{s.type} — {s.note}</p>
               {!compact && <p className={styles.buyerNote}>{s.buyerNote}</p>}
             </article>
@@ -59,7 +61,9 @@ export default function AreaSchoolsSection({ compact = false }: AreaSchoolsSecti
             Plus additional HDSB and HCDSB schools — see the full schools &amp; area guide.
           </p>
         )}
-        <p className={styles.disclaimer}>{locationDisclaimer}</p>
+        <p className={styles.disclaimer}>
+          {distanceDisclaimer} {locationDisclaimer}
+        </p>
       </div>
     </section>
   );
