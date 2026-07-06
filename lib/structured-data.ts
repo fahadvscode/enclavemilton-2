@@ -57,7 +57,7 @@ export function homepageGraph() {
         },
         image: {
           "@type": "ImageObject",
-          url: "https://cfzuypbljirmibmxpabi.supabase.co/storage/v1/object/public/rental-documents/1780268468620_Screenshot-2026-05-13-at-16.59.20.png",
+          url: "https://images.preconfactory.com/storage/v1/object/public/rental-documents/1780268468620_Screenshot-2026-05-13-at-16.59.20.png",
           caption: "The Enclave Milton community rendering by Sundial Homes",
         },
         numberOfRooms: { "@type": "QuantitativeValue", minValue: 2, maxValue: 4 },

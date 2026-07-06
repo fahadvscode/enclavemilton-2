@@ -8,11 +8,11 @@ const u = (id: string, w: number) =>
 
 export const IMAGES = {
   /** Official Enclave wordmark (dark teal background) */
-  logo: "https://cfzuypbljirmibmxpabi.supabase.co/storage/v1/object/public/rental-documents/1780533510331_enclave_logo.png",
+  logo: "https://images.preconfactory.com/storage/v1/object/public/rental-documents/1780533510331_enclave_logo.png",
 
   /** Sundial community rendering — homepage & floor plans banner */
   hero:
-    "https://cfzuypbljirmibmxpabi.supabase.co/storage/v1/object/public/rental-documents/1780268468620_Screenshot-2026-05-13-at-16.59.20.png",
+    "https://images.preconfactory.com/storage/v1/object/public/rental-documents/1780268468620_Screenshot-2026-05-13-at-16.59.20.png",
 
   /** Community & area (not residential interiors) */
   trails: u("photo-1441974231531-c6227db76b6e", 1920),
